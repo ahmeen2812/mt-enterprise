@@ -54,14 +54,14 @@ export default function Navbar() {
   alt="MT Enterprise Logo" 
   className="h-20 w-auto object-contain" 
 />
-            <div className="flex flex-col leading-tight">
-              <span className="text-xl sm:text-2xl font-black tracking-tight text-[#0f172a] uppercase">
-                MT ENTERPRISE
-              </span>
-              <span className="text-[10px] uppercase tracking-[0.25em] text-[#ea580c] font-bold">
-                Cooling &amp; Repair Systems
-              </span>
-            </div>
+            <div className="hidden sm:flex flex-col">
+  <span className="text-xl sm:text-2xl font-black tracking-tight text-[#0f172a] uppercase">
+    MT ENTERPRISE
+  </span>
+  <span className="text-[10px] uppercase tracking-[0.25em] text-[#ea580c] font-bold">
+    Cooling &amp; Repair Systems
+  </span>
+</div>
           </motion.div>
 
           {/* Desktop Navigation Links */}

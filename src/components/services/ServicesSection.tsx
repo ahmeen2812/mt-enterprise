@@ -98,8 +98,10 @@ export default function ServicesSection() {
             transition={{ duration: 0.6 }}
             className="flex items-center gap-3 mb-4"
           >
-          
-            
+            <span className="w-3 h-3 bg-[#ea580c]" />
+            <span className="text-xs uppercase tracking-[0.3em] font-mono text-[#ea580c] font-bold">
+              02 / CORE SERVICES
+            </span>
           </motion.div>
 
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-8">
@@ -159,7 +161,7 @@ export default function ServicesSection() {
         </div>
 
         {/* ================= DETAILED SERVICE SHOWCASES ================= */}
-        <div className="space-y-28 sm:space-y-36">
+        <div className="space-y-24 sm:space-y-36">
           {SERVICES_DATA.map((service, index) => {
             const isEven = index % 2 === 1;
 
@@ -170,7 +172,7 @@ export default function ServicesSection() {
                 className="scroll-mt-32"
               >
                 <div
-                  className={`grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center ${
+                  className={`grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center ${
                     isEven ? "lg:grid-flow-dense" : ""
                   }`}
                 >
@@ -225,7 +227,7 @@ export default function ServicesSection() {
                     </div>
                   </motion.div>
 
-                  {/* 2-IMAGE GRID COLUMN */}
+                  {/* IMAGE COLUMN: 1 FULL-WIDTH PHOTO ON MOBILE, 2 PHOTOS ON DESKTOP */}
                   <motion.div
                     initial={{ opacity: 0, x: isEven ? -80 : 80 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -235,10 +237,10 @@ export default function ServicesSection() {
                       isEven ? "lg:col-start-1" : ""
                     }`}
                   >
-                    <div className="grid grid-cols-12 gap-4 h-[380px] sm:h-[460px]">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 h-[240px] sm:h-[320px] md:h-[380px] lg:h-[440px] xl:h-[480px]">
                       
-                      {/* Image 1: Main Tall Block (7 cols) */}
-                      <div className="col-span-7 h-full bg-slate-200 border-2 border-[#0f172a] relative overflow-hidden group">
+                      {/* Image 1: Full-width on mobile (col-span-1), 7 cols on desktop */}
+                      <div className="col-span-1 lg:col-span-7 h-full bg-slate-200 border-2 border-[#0f172a] relative overflow-hidden group">
                         <img
                           src={service.image1}
                           alt={service.image1Label}
@@ -250,8 +252,8 @@ export default function ServicesSection() {
                         </span>
                       </div>
 
-                      {/* Image 2: Secondary Offset Block (5 cols) */}
-                      <div className="col-span-5 h-full bg-slate-200 border-2 border-[#0f172a] relative overflow-hidden group">
+                      {/* Image 2: HIDDEN on mobile (hidden lg:block), visible only on desktop */}
+                      <div className="hidden lg:block lg:col-span-5 h-full bg-slate-200 border-2 border-[#0f172a] relative overflow-hidden group">
                         <img
                           src={service.image2}
                           alt={service.image2Label}
@@ -275,7 +277,7 @@ export default function ServicesSection() {
                     viewport={{ once: true }}
                     transition={{ duration: 1, ease: "easeOut" }}
                     style={{ originX: 0 }}
-                    className="w-full h-[1px] bg-slate-300 mt-28 sm:mt-36"
+                    className="w-full h-[1px] bg-slate-300 mt-24 sm:mt-36"
                   />
                 )}
               </div>

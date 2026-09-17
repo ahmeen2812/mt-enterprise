@@ -23,7 +23,7 @@ export default function Hero() {
                 delay: 0.2,
                 ease: [0.16, 1, 0.3, 1],
               }}
-              className="text-[3.6rem] sm:text-[4.8rem] md:text-[5.8rem] xl:text-[6.8rem] font-black leading-[0.88] tracking-tighter text-[#0f172a]"
+              className="text-[3.4rem] sm:text-[4.6rem] md:text-[5.6rem] xl:text-[6.8rem] font-black leading-[0.88] tracking-tighter text-[#0f172a]"
             >
               EXPERT
               <br />
@@ -78,12 +78,12 @@ export default function Hero() {
 
         </div>
 
-        {/* RIGHT COLUMN: 3 Custom-Animated Images with Zero Empty Space */}
-        <div className="lg:col-span-7 w-full">
-          <div className="grid grid-cols-12 gap-3 sm:gap-4 lg:gap-5 h-[420px] sm:h-[500px] lg:h-[560px] xl:h-[600px] items-stretch">
+        {/* RIGHT COLUMN: 2 Images on Mobile, 3 Images on Desktop */}
+        <div className="lg:col-span-7 w-full mt-4 lg:mt-0">
+          <div className="grid grid-cols-2 lg:grid-cols-12 gap-3 sm:gap-4 lg:gap-5 h-[280px] sm:h-[360px] md:h-[440px] lg:h-[540px] xl:h-[580px] items-stretch">
             
-            {/* IMAGE 1: Appears strictly from BOTTOM to TOP */}
-            <div className="col-span-4 h-full relative overflow-hidden bg-slate-200 border-2 border-slate-300 group">
+            {/* IMAGE 1: Visible on all screens (col-span-1 on mobile, col-span-4 on desktop) */}
+            <div className="col-span-1 lg:col-span-4 h-full relative overflow-hidden bg-slate-200 border-2 border-slate-300 group">
               <motion.div
                 initial={{ y: "100%", opacity: 0 }}
                 animate={{ y: "0%", opacity: 1 }}
@@ -100,19 +100,19 @@ export default function Hero() {
                   className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/80 via-transparent to-transparent opacity-90" />
-                <div className="absolute bottom-3.5 left-3.5 right-3.5 text-white">
+                <div className="absolute bottom-3 left-3 right-3 text-white">
                   <span className="text-[9px] uppercase tracking-widest font-mono text-[#ea580c] block">
                     UNIT 01
                   </span>
-                  <span className="text-xs font-bold uppercase tracking-tight line-clamp-1">
+                  <span className="text-xs font-bold uppercase tracking-tight truncate block">
                     Chiller Diagnostic
                   </span>
                 </div>
               </motion.div>
             </div>
 
-            {/* IMAGE 2: Appears strictly from TOP to BOTTOM */}
-            <div className="col-span-4 h-full relative overflow-hidden bg-slate-200 border-2 border-slate-300 group">
+            {/* IMAGE 2: Visible on all screens (col-span-1 on mobile, col-span-4 on desktop) */}
+            <div className="col-span-1 lg:col-span-4 h-full relative overflow-hidden bg-slate-200 border-2 border-slate-300 group">
               <motion.div
                 initial={{ y: "-100%", opacity: 0 }}
                 animate={{ y: "0%", opacity: 1 }}
@@ -129,19 +129,19 @@ export default function Hero() {
                   className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/80 via-transparent to-transparent opacity-90" />
-                <div className="absolute bottom-3.5 left-3.5 right-3.5 text-white">
+                <div className="absolute bottom-3 left-3 right-3 text-white">
                   <span className="text-[9px] uppercase tracking-widest font-mono text-[#ea580c] block">
                     UNIT 02
                   </span>
-                  <span className="text-xs font-bold uppercase tracking-tight line-clamp-1">
+                  <span className="text-xs font-bold uppercase tracking-tight truncate block">
                     Compressor Repair
                   </span>
                 </div>
               </motion.div>
             </div>
 
-            {/* IMAGE 3: Starts from CENTER, expanding UP and DOWN */}
-            <div className="col-span-4 h-full relative overflow-hidden bg-slate-200 border-2 border-slate-300 group">
+            {/* IMAGE 3: Hidden on mobile (hidden lg:block), visible only on desktop (lg:col-span-4) */}
+            <div className="hidden lg:block lg:col-span-4 h-full relative overflow-hidden bg-slate-200 border-2 border-slate-300 group">
               <motion.div
                 initial={{ scaleY: 0, opacity: 0 }}
                 animate={{ scaleY: 1, opacity: 1 }}
@@ -159,11 +159,11 @@ export default function Hero() {
                   className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/80 via-transparent to-transparent opacity-90" />
-                <div className="absolute bottom-3.5 left-3.5 right-3.5 text-white">
+                <div className="absolute bottom-3 left-3 right-3 text-white">
                   <span className="text-[9px] uppercase tracking-widest font-mono text-[#ea580c] block">
                     UNIT 03
                   </span>
-                  <span className="text-xs font-bold uppercase tracking-tight line-clamp-1">
+                  <span className="text-xs font-bold uppercase tracking-tight truncate block">
                     Heavy Systems
                   </span>
                 </div>
