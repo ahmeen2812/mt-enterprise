@@ -76,18 +76,7 @@ export default function ServicesSection() {
         
         {/* ================= SECTION TITLE ================= */}
         <div className="mb-20">
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="flex items-center gap-3 mb-4"
-          >
-            <span className="w-3 h-3 bg-[#ea580c]" />
-            <span className="text-xs uppercase tracking-[0.3em] font-mono text-[#ea580c] font-bold">
-              02 / CORE SERVICES
-            </span>
-          </motion.div>
+         
 
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-8">
             <motion.h2
