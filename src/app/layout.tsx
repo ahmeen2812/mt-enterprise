@@ -1,8 +1,6 @@
 import type { Metadata, Viewport } from "next";
-import Script from "next/script";
 import "./globals.css";
 
-// 1. Mobile Viewport Configuration
 export const viewport: Viewport = {
   themeColor: "#0f172a",
   width: "device-width",
@@ -10,24 +8,22 @@ export const viewport: Viewport = {
   maximumScale: 5,
 };
 
-// 2. Comprehensive Search Engine & Social Media Meta Tags
 export const metadata: Metadata = {
-  metadataBase: new URL("https://mtenterprise.com"), // Replace with your live domain once purchased
+  metadataBase: new URL("https://mtenterprise.com"),
   title: {
-    default: "MT Enterprise | Expert Chiller, AC & Refrigerator Repair Kuala Lumpur",
+    default: "MT Enterprise | Commercial Chiller, Refrigerator & Washing Machine Repair KL",
     template: "%s | MT Enterprise",
   },
   description:
-    "Industrial chiller repair, commercial walk-in freezers, precision AC overhaul, and heavy washing machine repair in Kuala Lumpur & Klang Valley. 24/7 Emergency Dispatch: +60 17-302 7306.",
+    "Industrial chiller repair, commercial walk-in freezers, display refrigerators, and washing machine repair in Kuala Lumpur & Klang Valley. 24/7 Emergency Dispatch: +60 17-302 7306.",
   keywords: [
     "chiller repair kuala lumpur",
     "commercial refrigeration repair KL",
-    "air conditioner repair kuala lumpur",
     "washing machine repair kuala lumpur",
     "walk in freezer repair malaysia",
     "cold room repair klang valley",
-    "industrial HVAC contractor KL",
-    "emergency chiller maintenance",
+    "industrial chiller maintenance",
+    "commercial fridge technician KL",
     "MT Enterprise repair",
   ],
   authors: [{ name: "MT Enterprise" }],
@@ -52,9 +48,8 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  // WhatsApp, Facebook & LinkedIn Link Preview Card
   openGraph: {
-    title: "MT Enterprise | Precision Chiller & Cooling Systems Repair KL",
+    title: "MT Enterprise | Precision Chiller, Refrigerator & Machine Repair KL",
     description:
       "Industrial & commercial cooling repairs in Kuala Lumpur. Over 20+ years of technical experience. 24/7 on-site emergency dispatch.",
     url: "https://mtenterprise.com",
@@ -64,26 +59,24 @@ export const metadata: Metadata = {
         url: "/images/hero-1.png",
         width: 1200,
         height: 630,
-        alt: "MT Enterprise Industrial Chiller & AC Repair in Kuala Lumpur",
+        alt: "MT Enterprise Industrial Chiller Repair in Kuala Lumpur",
       },
     ],
     locale: "en_MY",
     type: "website",
   },
-  // Twitter / X Preview Card
   twitter: {
     card: "summary_large_image",
     title: "MT Enterprise | Chiller & Fridge Repair Kuala Lumpur",
     description:
-      "Commercial chillers, walk-in freezers, AC systems & washing machine repairs. Direct call / WhatsApp: +60 17-302 7306.",
+      "Commercial chillers, walk-in freezers & washing machine repairs. Direct call / WhatsApp: +60 17-302 7306.",
     images: ["/images/hero-1.png"],
   },
 };
 
-// 3. Schema.org JSON-LD Structured Data for Google Maps & Local Search
 const schemaMarkup = {
   "@context": "https://schema.org",
-  "@type": "HVACBusiness",
+  "@type": "LocalBusiness",
   name: "MT Enterprise",
   image: "https://mtenterprise.com/images/hero-1.png",
   "@id": "https://mtenterprise.com",
@@ -143,13 +136,6 @@ const schemaMarkup = {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "Air Conditioning Repair & Overhaul",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
           name: "Commercial Refrigerator Service",
         },
       },
@@ -179,30 +165,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        {/* Google Structured Data (JSON-LD) for Local Ranking */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }}
         />
-
-        {/* 
-          GOOGLE ADS / GOOGLE TAG MANAGER INJECTION 
-          Replace 'AW-XXXXXXXXXX' with your Google Ads Tag ID once you create a campaign.
-        */}
-        {/*
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXXX"
-          strategy="afterInteractive"
-        />
-        <Script id="google-ads-tag" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'AW-XXXXXXXXXX');
-          `}
-        </Script>
-        */}
       </head>
       <body className="antialiased selection:bg-[#ea580c] selection:text-white">
         {children}

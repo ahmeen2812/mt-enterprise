@@ -1,7 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
-
 export default function Footer() {
   return (
     <footer className="w-full bg-[#0f172a] text-white pt-24 pb-12 px-6 sm:px-10 lg:px-16 xl:px-20 border-t-4 border-[#ea580c] overflow-hidden">
@@ -14,7 +12,7 @@ export default function Footer() {
               KUALA LUMPUR OPERATIONAL FIELD SERVICE
             </span>
             <h3 className="text-3xl sm:text-4xl lg:text-5xl font-black uppercase tracking-tight text-white leading-tight">
-              KEEPING CRITICAL COOLING <br />
+              KEEPING CRITICAL CHILLERS, COLD ROOMS <br />
               <span className="text-slate-400">&amp; COMMERCIAL MACHINERY ONLINE.</span>
             </h3>
           </div>
@@ -44,11 +42,24 @@ export default function Footer() {
           {/* COL 1: Brand & Credentials (4 cols) */}
           <div className="lg:col-span-4 space-y-5">
             <div className="flex items-center gap-3">
-             <img 
-  src="/images/logo.png" 
-  alt="MT Enterprise Logo" 
-  className="h-10 w-auto object-contain" 
-/>
+              <div className="w-10 h-10 bg-white rounded flex items-center justify-center p-2">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="w-full h-full text-[#ea580c]"
+                >
+                  <circle cx="12" cy="12" r="9" stroke="#0f172a" strokeWidth="1.5" />
+                  <path d="M12 3v6" />
+                  <path d="M12 15v6" />
+                  <path d="M3 12h6" />
+                  <path d="M15 12h6" />
+                  <circle cx="12" cy="12" r="3" fill="#ea580c" />
+                </svg>
+              </div>
               <div className="flex flex-col">
                 <span className="text-xl font-black uppercase tracking-tight text-white leading-none">
                   MT ENTERPRISE
@@ -60,7 +71,7 @@ export default function Footer() {
             </div>
 
             <p className="text-xs text-slate-400 leading-relaxed max-w-sm">
-              Certified technical contractor for heavy industrial chillers, commercial walk-in freezers, multi-split VRF air conditioning, and laundry systems across Kuala Lumpur.
+              Certified technical contractor for heavy industrial chillers, commercial walk-in freezers, supermarket refrigeration, and laundry systems across Kuala Lumpur.
             </p>
 
             {/* Live Operational Status */}
@@ -110,7 +121,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* COL 3: Specialized Capabilities (3 cols) */}
+          {/* COL 3: Specialized Capabilities (AC REMOVED) (3 cols) */}
           <div className="lg:col-span-3 space-y-4">
             <span className="text-xs uppercase font-mono tracking-widest text-[#ea580c] font-bold block">
               Core Technical Units
@@ -118,10 +129,10 @@ export default function Footer() {
             <ul className="space-y-2 text-xs text-slate-400 font-medium">
               <li>• Industrial Screw &amp; Scroll Chillers</li>
               <li>• Cold Room &amp; Deep Freezer (-35°C)</li>
-              <li>• Inverter PCB AC Diagnostics</li>
-              <li>• Chemical Coil Descaling &amp; Purge</li>
-              <li>• Commercial Supermarket Fridges</li>
-              <li>• Drum Bearings &amp; Industrial Washers</li>
+              <li>• Commercial Supermarket Display Chillers</li>
+              <li>• Compressor Relay &amp; Sensor Calibration</li>
+              <li>• Automatic Washing Machine Mechanics</li>
+              <li>• Drum Bearings &amp; Industrial Laundromat Washers</li>
             </ul>
           </div>
 

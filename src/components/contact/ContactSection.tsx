@@ -53,7 +53,6 @@ export default function ContactSection() {
           location: "Kuala Lumpur Area",
         });
 
-        // Auto-dismiss notification after 7 seconds
         setTimeout(() => {
           setShowNotification(false);
           setStatus("IDLE");
@@ -105,7 +104,6 @@ export default function ContactSection() {
                 [✕]
               </button>
             </div>
-            {/* Countdown Shrink Bar */}
             <motion.div
               initial={{ scaleX: 1 }}
               animate={{ scaleX: 0 }}
@@ -128,7 +126,10 @@ export default function ContactSection() {
             transition={{ duration: 0.6 }}
             className="flex items-center gap-3 mb-4"
           >
-           
+            <span className="w-3 h-3 bg-[#ea580c]" />
+            <span className="text-xs uppercase tracking-[0.3em] font-mono text-[#ea580c] font-bold">
+              04 / EMERGENCY DISPATCH &amp; KUALA LUMPUR HUB
+            </span>
           </motion.div>
 
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-8">
@@ -365,7 +366,7 @@ export default function ContactSection() {
                 </div>
               </div>
 
-              {/* Row 2: Email & Service */}
+              {/* Row 2: Email & Service (AC REMOVED FROM DROPDOWN) */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
                   <label className="block text-xs uppercase font-bold text-[#0f172a] tracking-wider mb-2">
@@ -394,9 +395,6 @@ export default function ContactSection() {
                   >
                     <option value="Commercial Chiller & Industrial Freezer">
                       Commercial Chiller &amp; Industrial Freezer
-                    </option>
-                    <option value="Air Conditioning Repair & Overhaul">
-                      Air Conditioning Repair &amp; Overhaul
                     </option>
                     <option value="Commercial Refrigerator Service">
                       Commercial Refrigerator Service
@@ -447,7 +445,7 @@ export default function ContactSection() {
                   required
                   name="details"
                   rows={4}
-                  placeholder="State your area in Kuala Lumpur (e.g. Cheras, Petaling Jaya, KL Centre), error codes, pressure drops, or strange sounds..."
+                  placeholder="State your area in Kuala Lumpur (e.g. Cheras, Petaling Jaya, KL Centre), error codes, cooling drops, or strange sounds..."
                   value={formData.details}
                   onChange={handleChange}
                   className="w-full px-4 py-3.5 bg-[#f8fafc] border-2 border-slate-300 text-xs font-medium text-[#0f172a] focus:outline-none focus:border-[#ea580c] transition-colors"
