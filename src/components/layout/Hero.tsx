@@ -105,7 +105,7 @@ export default function Hero() {
                     UNIT 01
                   </span>
                   <span className="text-xs font-bold uppercase tracking-tight truncate block">
-                    Chiller Diagnostic
+                    AC Repair 
                   </span>
                 </div>
               </motion.div>
@@ -154,7 +154,7 @@ export default function Hero() {
                 className="w-full h-full relative"
               >
                 <img
-                  src="/images/hero-3.png"
+                  src="/images/washer-2.png"
                   alt="Industrial Washing Machine Repair"
                   className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                 />
