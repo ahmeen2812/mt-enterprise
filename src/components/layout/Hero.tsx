@@ -95,7 +95,7 @@ export default function Hero() {
                 className="w-full h-full relative"
               >
                 <img
-                  src="/images/hero-1.png"
+                  src="/images/hero1.jpg"
                   alt="AC & Chiller Repair"
                   className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                 />
