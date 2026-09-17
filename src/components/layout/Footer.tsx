@@ -42,24 +42,11 @@ export default function Footer() {
           {/* COL 1: Brand & Credentials (4 cols) */}
           <div className="lg:col-span-4 space-y-5">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-white rounded flex items-center justify-center p-2">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="w-full h-full text-[#ea580c]"
-                >
-                  <circle cx="12" cy="12" r="9" stroke="#0f172a" strokeWidth="1.5" />
-                  <path d="M12 3v6" />
-                  <path d="M12 15v6" />
-                  <path d="M3 12h6" />
-                  <path d="M15 12h6" />
-                  <circle cx="12" cy="12" r="3" fill="#ea580c" />
-                </svg>
-              </div>
+                <img 
+  src="/images/logo.png" 
+  alt="MT Enterprise Logo" 
+  className="h-10 w-auto object-contain" 
+/>
               <div className="flex flex-col">
                 <span className="text-xl font-black uppercase tracking-tight text-white leading-none">
                   MT ENTERPRISE
