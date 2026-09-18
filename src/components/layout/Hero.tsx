@@ -98,7 +98,7 @@ export default function Hero() {
           */}
           <div className="w-full relative bg-[#0f172a] border-2 border-[#0f172a] shadow-lg group overflow-hidden">
             <img
-              src="/images/hero-1.png"
+              src="/images/main.png"
               alt="MT Enterprise Commercial Chiller & Refrigerator Repair Banner"
               className="w-full h-auto block transition-transform duration-500 ease-out group-hover:scale-[1.01]"
               loading="eager"
