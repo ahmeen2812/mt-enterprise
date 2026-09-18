@@ -6,11 +6,11 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative w-full min-h-[90vh] pt-28 sm:pt-32 lg:pt-36 pb-16 lg:pb-24 px-6 sm:px-10 lg:px-16 xl:px-20 flex items-center justify-center bg-[#f8fafc]"
+      className="relative w-full min-h-[85vh] lg:min-h-[90vh] pt-28 sm:pt-32 lg:pt-36 pb-16 lg:pb-24 px-6 sm:px-10 lg:px-16 xl:px-20 flex items-center justify-center bg-[#f8fafc]"
     >
       <div className="w-full max-w-[1600px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 xl:gap-16 items-center">
         
-        {/* LEFT COLUMN: Headline, Clean Subtext & Clean Button */}
+        {/* LEFT COLUMN: Authority Typography & Direct Action (5 cols on Desktop) */}
         <div className="lg:col-span-5 flex flex-col justify-center">
           
           {/* Main Headline (Animates from top to down) */}
@@ -35,7 +35,7 @@ export default function Hero() {
             </motion.h1>
           </div>
 
-          {/* Subtext (Animates from bottom to up) */}
+          {/* Subtext Paragraph (Animates from bottom to up) */}
           <div className="overflow-hidden mb-8 sm:mb-10">
             <motion.p
               initial={{ y: 100, opacity: 0 }}
@@ -78,100 +78,31 @@ export default function Hero() {
 
         </div>
 
-        {/* RIGHT COLUMN: 2 Images on Mobile, 3 Images on Desktop */}
-        <div className="lg:col-span-7 w-full mt-4 lg:mt-0">
-          <div className="grid grid-cols-2 lg:grid-cols-12 gap-3 sm:gap-4 lg:gap-5 h-[280px] sm:h-[360px] md:h-[440px] lg:h-[540px] xl:h-[580px] items-stretch">
-            
-            {/* IMAGE 1: Visible on all screens (col-span-1 on mobile, col-span-4 on desktop) */}
-            <div className="col-span-1 lg:col-span-4 h-full relative overflow-hidden bg-slate-200 border-2 border-slate-300 group">
-              <motion.div
-                initial={{ y: "100%", opacity: 0 }}
-                animate={{ y: "0%", opacity: 1 }}
-                transition={{
-                  duration: 1.2,
-                  delay: 0.3,
-                  ease: [0.16, 1, 0.3, 1],
-                }}
-                className="w-full h-full relative"
-              >
-                <img
-                  src="/images/hero1.jpg"
-                  alt="AC & Chiller Repair"
-                  className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/80 via-transparent to-transparent opacity-90" />
-                <div className="absolute bottom-3 left-3 right-3 text-white">
-                  <span className="text-[9px] uppercase tracking-widest font-mono text-[#ea580c] block">
-                    UNIT 01
-                  </span>
-                  <span className="text-xs font-bold uppercase tracking-tight truncate block">
-                    AC Repair 
-                  </span>
-                </div>
-              </motion.div>
-            </div>
-
-            {/* IMAGE 2: Visible on all screens (col-span-1 on mobile, col-span-4 on desktop) */}
-            <div className="col-span-1 lg:col-span-4 h-full relative overflow-hidden bg-slate-200 border-2 border-slate-300 group">
-              <motion.div
-                initial={{ y: "-100%", opacity: 0 }}
-                animate={{ y: "0%", opacity: 1 }}
-                transition={{
-                  duration: 1.2,
-                  delay: 0.45,
-                  ease: [0.16, 1, 0.3, 1],
-                }}
-                className="w-full h-full relative"
-              >
-                <img
-                  src="/images/hero-2.png"
-                  alt="Refrigerator Repair"
-                  className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/80 via-transparent to-transparent opacity-90" />
-                <div className="absolute bottom-3 left-3 right-3 text-white">
-                  <span className="text-[9px] uppercase tracking-widest font-mono text-[#ea580c] block">
-                    UNIT 02
-                  </span>
-                  <span className="text-xs font-bold uppercase tracking-tight truncate block">
-                    Compressor Repair
-                  </span>
-                </div>
-              </motion.div>
-            </div>
-
-            {/* IMAGE 3: Hidden on mobile (hidden lg:block), visible only on desktop (lg:col-span-4) */}
-            <div className="hidden lg:block lg:col-span-4 h-full relative overflow-hidden bg-slate-200 border-2 border-slate-300 group">
-              <motion.div
-                initial={{ scaleY: 0, opacity: 0 }}
-                animate={{ scaleY: 1, opacity: 1 }}
-                transition={{
-                  duration: 1.3,
-                  delay: 0.65,
-                  ease: [0.16, 1, 0.3, 1],
-                }}
-                style={{ originY: 0.5 }}
-                className="w-full h-full relative"
-              >
-                <img
-                  src="/images/washer-2.png"
-                  alt="Industrial Washing Machine Repair"
-                  className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/80 via-transparent to-transparent opacity-90" />
-                <div className="absolute bottom-3 left-3 right-3 text-white">
-                  <span className="text-[9px] uppercase tracking-widest font-mono text-[#ea580c] block">
-                    UNIT 03
-                  </span>
-                  <span className="text-xs font-bold uppercase tracking-tight truncate block">
-                    Heavy Systems
-                  </span>
-                </div>
-              </motion.div>
-            </div>
-
+        {/* RIGHT COLUMN: Single Wide-Aspect Photo (7 cols on Desktop) */}
+        <motion.div
+          initial={{ opacity: 0, y: 60 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 1.2,
+            delay: 0.35,
+            ease: [0.16, 1, 0.3, 1],
+          }}
+          className="lg:col-span-7 w-full mt-4 lg:mt-0"
+        >
+          {/*
+            aspect-[2/1] locks the container to the photo's 2x-width-to-height ratio.
+            sm:aspect-[16/9] / lg:aspect-[2/1] ensures zero distortion on mobile, tablet, or 4K monitors.
+          */}
+          <div className="w-full aspect-[2/1] relative overflow-hidden bg-slate-200 border-2 border-[#0f172a] group shadow-sm">
+            <img
+              src="/images/hero-1.png"
+              alt="MT Enterprise Commercial Chiller and Refrigerator Repair"
+              className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+            />
+            {/* Clean solid architectural accent notch in the corner */}
+            <div className="absolute top-0 right-0 w-3 h-3 bg-[#0f172a] group-hover:bg-[#ea580c] transition-colors" />
           </div>
-        </div>
+        </motion.div>
 
       </div>
     </section>
