@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import Script from "next/script";
 
 export const viewport: Viewport = {
   themeColor: "#0f172a",
@@ -9,7 +10,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://mtenterprise.com"),
+  metadataBase: new URL("https://themtenterprise.com"),
   title: {
     default: "MT Enterprise | Commercial Chiller, Refrigerator & Washing Machine Repair KL",
     template: "%s | MT Enterprise",
@@ -52,7 +53,7 @@ export const metadata: Metadata = {
     title: "MT Enterprise | Precision Chiller, Refrigerator & Machine Repair KL",
     description:
       "Industrial & commercial cooling repairs in Kuala Lumpur. Over 20+ years of technical experience. 24/7 on-site emergency dispatch.",
-    url: "https://mtenterprise.com",
+    url: "https://themtenterprise.com",
     siteName: "MT Enterprise",
     images: [
       {
@@ -78,9 +79,9 @@ const schemaMarkup = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: "MT Enterprise",
-  image: "https://mtenterprise.com/images/hero-1.png",
-  "@id": "https://mtenterprise.com",
-  url: "https://mtenterprise.com",
+  image: "https://themtenterprise.com/images/hero-1.png",
+  "@id": "https://themtenterprise.com",
+  url: "https://themtenterprise.com",
   telephone: "+60173027306",
   email: "aisulamin32@gmail.com",
   priceRange: "$$",
@@ -171,6 +172,21 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased selection:bg-[#ea580c] selection:text-white">
+        {/* ================= GOOGLE ADS TRACKING SCRIPT ================= */}
+        {/* Replace AW-XXXXXXXXXX with the ID your ads manager gives you */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXXX"
+          strategy="afterInteractive"
+        />
+        <Script id="google-ads-tag" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-XXXXXXXXXX');
+          `}
+        </Script>
+
         {children}
       </body>
     </html>
