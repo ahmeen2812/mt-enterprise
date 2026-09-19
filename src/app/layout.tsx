@@ -175,7 +175,7 @@ export default function RootLayout({
         {/* ================= GOOGLE ADS TRACKING SCRIPT ================= */}
         {/* Replace AW-XXXXXXXXXX with the ID your ads manager gives you */}
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXXX"
+          src="https://www.googletagmanager.com/gtag/js?id=GTM-WSK7W8LF"
           strategy="afterInteractive"
         />
         <Script id="google-ads-tag" strategy="afterInteractive">
@@ -183,7 +183,7 @@ export default function RootLayout({
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'AW-XXXXXXXXXX');
+            gtag('config', 'GTM-WSK7W8LF');
           `}
         </Script>
 
