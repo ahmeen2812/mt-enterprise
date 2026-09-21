@@ -211,5 +211,5 @@ export default function RootLayout({
         {children}
       </body>
     </html>
-  );
+  ); 
 }
