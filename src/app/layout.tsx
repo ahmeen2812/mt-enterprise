@@ -183,7 +183,6 @@ export default function RootLayout({
           />
         </noscript>
 
-        {/* ================= 2. GOOGLE TAG MANAGER SCRIPT ================= */}
         <Script id="google-tag-manager" strategy="afterInteractive">
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
