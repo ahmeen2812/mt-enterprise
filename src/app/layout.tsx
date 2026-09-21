@@ -193,7 +193,6 @@ export default function RootLayout({
           `}
         </Script>
 
-        {/* ================= 3. GOOGLE ADS DIRECT CONVERSION TAG ================= */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-18461273358"
           strategy="afterInteractive"
