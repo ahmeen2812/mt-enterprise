@@ -173,7 +173,6 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased selection:bg-[#ea580c] selection:text-white">
-        {/* ================= 1. GOOGLE TAG MANAGER (NOSCRIPT FALLBACK) ================= */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-KB3WDGZT"
