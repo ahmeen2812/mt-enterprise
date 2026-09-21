@@ -166,16 +166,37 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
+        {/* Local Business Structured Data for Google Search */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }}
         />
       </head>
       <body className="antialiased selection:bg-[#ea580c] selection:text-white">
-        {/* ================= GOOGLE ADS TRACKING SCRIPT ================= */}
-        {/* Replace AW-XXXXXXXXXX with the ID your ads manager gives you */}
+        {/* ================= 1. GOOGLE TAG MANAGER (NOSCRIPT FALLBACK) ================= */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-KB3WDGZT"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
+
+        {/* ================= 2. GOOGLE TAG MANAGER SCRIPT ================= */}
+        <Script id="google-tag-manager" strategy="afterInteractive">
+          {`
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-KB3WDGZT');
+          `}
+        </Script>
+
+        {/* ================= 3. GOOGLE ADS DIRECT CONVERSION TAG ================= */}
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=GTM-WSK7W8LF"
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18461273358"
           strategy="afterInteractive"
         />
         <Script id="google-ads-tag" strategy="afterInteractive">
@@ -183,7 +204,7 @@ export default function RootLayout({
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'GTM-WSK7W8LF');
+            gtag('config', 'AW-18461273358');
           `}
         </Script>
 
@@ -192,6 +213,3 @@ export default function RootLayout({
     </html>
   );
 }
- 
-
-
